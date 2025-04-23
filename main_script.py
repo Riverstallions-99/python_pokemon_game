@@ -1,8 +1,8 @@
 # Main code which pulls in battle_pokemon and the pick_pokemon modules
-from pick_pokemon import user_picks_pokemon, CPU_picks_random_pokemon
+from pick_pokemon import user_picks_pokemon, pick_random_pokemon
 import requests, json, random
 
-CPU_pokemon = CPU_picks_random_pokemon()
+CPU_pokemon = pick_random_pokemon()
 user_prompt = True
 while user_prompt:
     assign_player_random_pokemon = input("Would you like to:\n1. Choose your own pokemon\n2. Get assigned a random pokemon\nEnter 1 or 2: ")
@@ -12,10 +12,10 @@ while user_prompt:
     else:
         print("Invalid input.")
 
-print(f"Assign player random pokemon? {assign_player_random_pokemon}")
-
-
-user_pokemon = user_picks_pokemon()
+if assign_player_random_pokemon:
+    user_pokemon = pick_random_pokemon()
+else:
+    user_pokemon = user_picks_pokemon()
 
 def get_pokemon_data(pokemon_name:str) -> dict:
     # Get the pokemon's data from the API

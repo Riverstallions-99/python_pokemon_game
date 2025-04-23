@@ -18,7 +18,7 @@ def user_picks_pokemon() -> str:
     choice = input().lower()
     return choice
 
-def CPU_picks_random_pokemon() -> str:
+def pick_random_pokemon() -> str:
     # Get the list of pokemon from the API
     url = 'https://pokeapi.co/api/v2/pokemon/'
     response = requests.get(url)
