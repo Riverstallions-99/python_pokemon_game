@@ -3,6 +3,7 @@ from pick_pokemon import user_picks_pokemon, CPU_picks_random_pokemon
 import requests, json, random
 
 CPU_pokemon = CPU_picks_random_pokemon()
+assign_player_random_pokemon = input("Would you like to:\n1. Choose your own pokemon\n2. Get assigned a random pokemon\nEnter 1 or 2: ")
 user_pokemon = user_picks_pokemon()
 
 def get_pokemon_data(pokemon_name:str) -> dict:
