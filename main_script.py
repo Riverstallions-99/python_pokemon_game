@@ -3,7 +3,16 @@ from pick_pokemon import user_picks_pokemon, CPU_picks_random_pokemon
 import requests, json, random
 
 CPU_pokemon = CPU_picks_random_pokemon()
-assign_player_random_pokemon = input("Would you like to:\n1. Choose your own pokemon\n2. Get assigned a random pokemon\nEnter 1 or 2: ")
+user_prompt = True
+while user_prompt:
+    assign_player_random_pokemon = input("Would you like to:\n1. Choose your own pokemon\n2. Get assigned a random pokemon\nEnter 1 or 2: ")
+    if assign_player_random_pokemon.isdigit() and (int(assign_player_random_pokemon) == 1 or int(assign_player_random_pokemon) == 2):
+        user_prompt = False
+    else:
+        print("Invalid input.")
+
+
+
 user_pokemon = user_picks_pokemon()
 
 def get_pokemon_data(pokemon_name:str) -> dict:
