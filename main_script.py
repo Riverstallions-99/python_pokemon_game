@@ -8,9 +8,11 @@ while user_prompt:
     assign_player_random_pokemon = input("Would you like to:\n1. Choose your own pokemon\n2. Get assigned a random pokemon\nEnter 1 or 2: ")
     if assign_player_random_pokemon.isdigit() and (int(assign_player_random_pokemon) == 1 or int(assign_player_random_pokemon) == 2):
         user_prompt = False
+        assign_player_random_pokemon = bool(int(assign_player_random_pokemon)-1)
     else:
         print("Invalid input.")
 
+print(f"Assign player random pokemon? {assign_player_random_pokemon}")
 
 
 user_pokemon = user_picks_pokemon()
