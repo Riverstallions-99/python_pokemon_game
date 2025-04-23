@@ -1,5 +1,6 @@
 # Main code which pulls in battle_pokemon and the pick_pokemon modules
 from pick_pokemon import user_picks_pokemon, pick_random_pokemon, user_pokemon_assignment
+from battle_pokemon import battle
 import requests, json, random
 
 CPU_pokemon = pick_random_pokemon()
@@ -32,4 +33,11 @@ def output_pokemon_data(pokemon_data):
     print('Height: {}'.format(height_formatted) + "(m)")
     print('Ability: {}'.format(ability['name']))
 
+print("\nYour pokemon:")
 output_pokemon_data(user_pokemon_data)
+
+print("\nCPU pokemon:")
+output_pokemon_data(CPU_pokemon_data)
+
+print("\n")
+battle(user_pokemon_data, CPU_pokemon_data)
