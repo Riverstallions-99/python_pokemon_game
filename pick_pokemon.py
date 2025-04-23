@@ -1,22 +1,24 @@
 import requests
 import json
 
-# Get the list of pokemon from the API
-url = 'https://pokeapi.co/api/v2/pokemon/'
-response = requests.get(url)
-pokemon_list = json.loads(response.text)['results']
+def user_picks_pokemon() -> str:
+    # Get the list of pokemon from the API
+    url = 'https://pokeapi.co/api/v2/pokemon/'
+    response = requests.get(url)
+    pokemon_list = json.loads(response.text)['results']
 
-for pokemon in pokemon_list:
-    print(pokemon['name'])
+    for pokemon in pokemon_list:
+        print(pokemon['name'])
 
-# Ask the user to choose a pokemon
-print('Enter your pokemon:')
+    # Ask the user to choose a pokemon
+    print('Enter your pokemon:')
 
-# Get the user's choice
-choice = input().lower()
+    # Get the user's choice
+    choice = input().lower()
+    return choice
 
 # Get the pokemon's data from the API
-url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(choice)
+url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(user_picks_pokemon())
 response = requests.get(url)
 pokemon_data = json.loads(response.text)
 
