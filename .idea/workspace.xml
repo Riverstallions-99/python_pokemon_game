@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38220ea7-c6bd-4bfd-a698-aef76da70da4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fetch_pokemon_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_pokemon_game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_pokemon_game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_script.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745418051990</updated>
-      <workItem from="1745480629120" duration="1365000" />
+      <workItem from="1745480629120" duration="2080000" />
     </task>
     <servers />
   </component>
