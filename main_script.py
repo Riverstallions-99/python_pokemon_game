@@ -1,5 +1,5 @@
 # Main code which pulls in battle_pokemon and the pick_pokemon modules
-from pick_pokemon import user_picks_pokemon, pick_random_pokemon, user_pokemon_assignment
+from pick_pokemon import pick_random_pokemon, user_pokemon_assignment
 from battle_pokemon import battle
 from fetch_pokemon_data import get_pokemon_data, output_pokemon_data
 

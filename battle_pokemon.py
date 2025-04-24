@@ -1,6 +1,7 @@
 def total_stats(pokemon_data):
     total = 0
     for stat in pokemon_data['stats']:
+        print(stat['base_stat'])
         total += stat['base_stat']
     return total
 
